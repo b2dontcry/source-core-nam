@@ -1,0 +1,13 @@
+{
+    "name": "UserAndPermission",
+    "alias": "userandpermission",
+    "description": "Manage users, permissions and some system features",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\UserAndPermission\\Providers\\UserAndPermissionServiceProvider"
+    ],
+    "aliases": {},
+    "files": ["Helpers/helpers.php"],
+    "requires": []
+}

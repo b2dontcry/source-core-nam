@@ -1,0 +1,43 @@
+version: '3.5'
+
+services:
+  laravel-phuongnam:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        uid: ${USER_ID}
+    container_name: laravel-phuongnam
+    environment:
+      - APACHE_RUN_USER=#${USER_ID}
+      - APACHE_RUN_GROUP=#${GROUP_ID}
+    volumes:
+      - ./:/var/www/html
+      - ./apache.conf:/etc/apache2/sites-available/000-default.conf
+    links:
+      - mysql-db
+    ports:
+      - "${DEFAULT_PORT}:80"
+    restart: always
+  mysql-db:
+    image: mysql:5.7
+    container_name: mysql-db
+    volumes:
+      - ./data/db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - "${DB_PORT}:3306"
+    restart: always
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin
+    environment:
+      PMA_HOST: ${DB_HOST}
+      PMA_USER: ${DB_USERNAME}
+      PMA_PASSWORD: ${DB_PASSWORD}
+    depends_on:
+      - mysql-db
+    ports:
+      - "${PHPMYADMIN_PORT}:80"
+    restart: always

@@ -1,0 +1,81 @@
+================================================================================
+[x] Login
+[x] Refresh token
+[x] Logout
+[x] Unauthorized
+[x] Locate
+[x] Rule Validation
+    [x] Phone
+    [x] Email
+    [/] Unique
+[x] Xuất messages
+======================================User======================================
+[x] Tạo migration user
+[x] Tạo seed user
+[x] Danh sách user
+    [x] Tìm kiếm
+    [x] Phân trang
+    [x] Sắp xếp
+[x] Chi tiết user
+[ ] Thêm user
+    [ ] Validation
+    [ ] Xử lý các quan hệ với user khi tạo (group, permission)
+[ ] Sửa user
+    [ ] Validation
+    [ ] Xóa các quan hệ với user (group, permission)
+    [ ] Thêm các quan hệ với user (group, permission)
+[ ] Xóa user
+    [ ] Xóa mềm
+    [ ] Xóa các quan hệ với user (group, permission)
+    [ ] Xóa cứng user (tài khoản admin)
+[ ] Khôi phục user (tài khoản admin)
+======================================Group=====================================
+[x] Tạo migration group
+[ ] Danh sách group
+    [ ] Tìm kiếm
+    [ ] Phân trang
+    [ ] Sắp xếp
+[ ] Chi tiết group
+[ ] Thêm group
+    [ ] Validation
+    [ ] Xử lý các quan hệ với group khi tạo (user, permission)
+[ ] Sửa group
+    [ ] Validation
+    [ ] Xóa các quan hệ với group (user, permission)
+    [ ] Thêm các quan hệ với group (user, permission)
+[ ] Xóa group
+    [ ] Xóa cứng
+    [ ] Xóa các quan hệ với group (user, permission)
+===================================Permission===================================
+[x] Tạo migration permission
+[x] Tạo seed permission
+[ ] Danh sách permission
+    [ ] Tìm kiếm
+    [ ] Phân trang
+    [ ] Sắp xếp
+=====================================History====================================
+[ ] Tạo migration history
+[ ] Lấy danh sách history
+[ ] Lấy chi tiết history
+[ ] Thêm history
+[ ] Xử lý xóa lịch sử sau 30 ngày
+==================================Login failed==================================
+[ ] Tạo migration login failed
+[ ] Kiểm tra login failed
+    [ ] Xử lý xóa login failed sau 1 ngày
+=================================User Permission================================
+[x] Tạo migration user permission
+[ ] Tạo quan hệ cho user và permission trong model
+===================================User Group===================================
+[x] Tạo migration user group
+[ ] Tạo quan hệ cho user và group trong model
+=================================Group Permission===============================
+[x] Tạo migration group permission
+[ ] Tạo quan hệ cho group và permission trong model
+==================================Session Token=================================
+[ ] Tạo migration session token
+[ ] Thêm session token
+[ ] Kiểm tra session token
+[ ] Cập nhật session token
+    [ ] Cập nhật cho từng user
+    [ ] Cập nhật cho 1 user
